@@ -3,7 +3,7 @@
 nomeAluno: "Seu nome"
 matricula: "Digite sua matrícula aqui por obséquio"
 ---
-
+  
 # Configurações iniciais no codespace
 
 ```bash

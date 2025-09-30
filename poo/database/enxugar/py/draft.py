@@ -26,7 +26,7 @@ class Towel:    #this
         return 0
 
     def __str__(self) -> str: # toString
-        return f"Cor:{self.color}, Tam:{self.size}, Umidade:{self.wetness}"
+        return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
     
     
 def main():
