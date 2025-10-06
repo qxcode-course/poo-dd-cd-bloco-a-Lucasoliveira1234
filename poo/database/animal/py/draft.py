@@ -1,53 +1,69 @@
+class Towel:    #this
+    def __init__(self, color: str, size: str): # constructor
+        self.color: str = color # atributos
+        self.size: str = size
+        self.wetness: int = 0
 
-        self.species: str = species
-        self.sound: str = sound
-        self.age: int = 0
-    def __str__(self):
-        return f"{self.species}:{self.age}:{self.sound}"
+    def dry(self, amount: int) -> None:
+        self.wetness += amount
+        if self.wetness >= self.getMaxWetness():
+            print("toalha encharcada")
+            self.wetness = self.getMaxWetness()
 
-    def ageBy(self, amount:int):
-        self.age += amount
-        if self.age >= 4:
-            print(f"warning: {self.species} morreu")
-       
-    def makeSound(self) ->None:
-        if self.age == 0:class Animal:
-    def __init__(self, species: str, sound: str):
-            print("---")
-        elif self.age == 4:
-            self.age = 4
-            print("RIP")
-        else:
-            print(self.sound)
+    def isDry(self) -> bool:
+        return self.wetness == 0
+    
+    def wringOut(self) -> None:
+        self.wetness = 0
 
-    def growMax(self):
-        if self.age >= 4:
-            self.age = 4
+    def getMaxWetness(self) -> int:
+        if self.size == "P":
+            return 10
+        if self.size == "M":
+            return 20
+        if self.size == "G":
+            return 30
+        return 0
 
+    def __str__(self) -> str: # toString
+        return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
+    
+    
 def main():
-    animal= Animal(" "," ")
+    toalha = Towel("", "")
     while True:
         line = input()
-        args = line.split (" ")
-        print("$" + line)
+        args = line.split(" ")
+        print('$' + line)
 
         if args[0] == "end":
             break
 
-        if args[0] == "show":
-            print(animal)
+        elif args[0] == "criar":
+            color = args[1]
+            size = args[2]
+            toalha = Towel(color, size)
 
-        if args[0] == "init":
-            species = args[1]
-            sound = args[2]
-            animal = Animal(species, sound)
+        elif args[0] == "mostrar":
+            print(toalha)
 
-        if args[0] == "grow":
+        elif args[0] == "enxugar": 
             amount = int(args[1])
-            animal.ageBy(amount)
-            animal.growMax()
+            toalha.dry(amount)
+            if toalha.wetness > toalha.getMaxWetness():   
+                print("toalha encharcada")
+                toalha.wetness = toalha.getMaxWetness()
 
-        if args[0] == "noise":
-            animal.makeSound()
-            
+        elif args[0] == "seca":
+            if toalha.isDry()  :
+                print("sim")
+            else:
+                print("nao")  
+
+        elif args[0] == "torcer":
+            toalha.wringOut()
+
+        else:
+            print("Comando inválido")
+
 main()

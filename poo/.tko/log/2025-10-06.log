@@ -72,3 +72,42 @@
 2025-10-06 02:33:01, EXEC, v:1, k:calculadora, mode:FULL, rate:81, size:80
 2025-10-06 02:33:08, EXEC, v:1, k:calculadora, mode:FULL, rate:81, size:80
 2025-10-06 02:33:21, EXEC, v:1, k:calculadora, mode:FULL, rate:81, size:80
+2025-10-06 02:34:27, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-06 02:34:30, MOVE, v:1, k:toalha, mode:PICK
+2025-10-06 02:34:56, EXEC, v:1, k:toalha, mode:LOCK, rate:0, size:69
+2025-10-06 02:35:09, MOVE, v:1, k:toalha, mode:BACK
+2025-10-06 02:37:36, SELF, v:1, k:toalha, rate:100, human:SIM, guide:SIM, alone:5, study:40
+2025-10-06 02:38:07, SELF, v:1, k:animal, alone:3
+2025-10-06 02:38:25, SELF, v:1, k:animal, alone:3
+2025-10-06 02:38:42, SELF, v:1, k:toalha, rate:100, human:SIM, guide:SIM, alone:5, study:40
+2025-10-06 02:39:09, SELF, v:1, k:carro, rate:100
+2025-10-06 02:44:20, MOVE, v:1, k:animal, mode:PICK
+2025-10-06 02:44:21, EXEC, v:1, k:animal, mode:FULL, rate:0, size:49
+2025-10-06 02:44:37, MOVE, v:1, k:animal, mode:BACK
+2025-10-06 02:44:39, MOVE, v:1, k:animal, mode:PICK
+2025-10-06 02:44:41, MOVE, v:1, k:animal, mode:BACK
+2025-10-06 02:46:38, SELF, v:1, k:animal, human:amigo, iagen:gpt_para_duvidas, guide:sim, alone:6, study:120
+2025-10-06 02:46:47, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-06 02:46:49, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-06 02:48:19, SELF, v:1, k:carro, rate:100, iagen:pouco, guide:video, alone:8, study:120
+2025-10-06 02:48:44, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-06 02:48:45, EXEC, v:1, k:calculadora, mode:FULL, rate:81, size:80
+2025-10-06 02:48:51, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-06 02:48:58, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-06 02:48:58, EXEC, v:1, k:enxugar, mode:FULL, rate:100
+2025-10-06 02:49:01, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-06 02:49:09, MOVE, v:1, k:animal, mode:PICK
+2025-10-06 02:49:10, EXEC, v:1, k:animal, mode:FULL, rate:0
+2025-10-06 02:49:24, EXEC, v:1, k:animal, mode:FULL, rate:0
+2025-10-06 02:50:52, EXEC, v:1, k:animal, mode:FULL, rate:0, size:69
+2025-10-06 02:51:14, MOVE, v:1, k:animal, mode:BACK
+2025-10-06 02:51:42, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-06 02:51:43, EXEC, v:1, k:calculadora, mode:FULL, rate:81
+2025-10-06 02:51:47, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-06 02:52:29, SELF, v:1, k:calculadora, rate:81, iagen:sim, guide:sim, study:120
+2025-10-06 02:52:36, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-06 02:52:40, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-06 02:52:49, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-06 02:52:51, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-06 02:53:34, SELF, v:1, k:enxugar, rate:100, human:amigos, guide:sim, alone:7, study:90
+2025-10-06 02:53:46, MOVE, v:1, k:enxugar, mode:PICK

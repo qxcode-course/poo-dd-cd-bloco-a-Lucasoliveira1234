@@ -10,11 +10,15 @@ expanded:
 - campanha-principal
 - bloco_b-primeiras-classes
 tasks:
-  carro: '{rate:100}'
+  toalha: '{rate:100, human:SIM, guide:SIM, alone:5, study:40}'
+  animal: '{human:amigo, iagen:gpt_para_duvidas, guide:sim, alone:6, study:120}'
+  carro: '{rate:100, iagen:pouco, guide:video, alone:8, study:120}'
+  calculadora: '{rate:81, iagen:sim, guide:sim, study:120}'
+  enxugar: '{rate:100, human:amigos, guide:sim, alone:7, study:90}'
 flags:
   quests: 1
   tracks: 0
   tasks: 0
   graph: 0
   xray: 0
-index: calculadora
+index: enxugar
