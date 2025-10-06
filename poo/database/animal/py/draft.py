@@ -1,5 +1,4 @@
-class Animal:
-    def __init__(self, species: str, sound: str):
+
         self.species: str = species
         self.sound: str = sound
         self.age: int = 0
@@ -12,7 +11,8 @@ class Animal:
             print(f"warning: {self.species} morreu")
        
     def makeSound(self) ->None:
-        if self.age == 0:
+        if self.age == 0:class Animal:
+    def __init__(self, species: str, sound: str):
             print("---")
         elif self.age == 4:
             self.age = 4
