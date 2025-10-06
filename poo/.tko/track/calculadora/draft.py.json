@@ -1,0 +1,189 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-06_01-55-58",
+            "content": "@@ -794,197 +794,4 @@\n en%0A%0A\n-def main():%0A    calculadora = None%0A%0A    while True:%0A        try:%0A            line: str = input().strip()%0A        except EOFEerror:%0A            break%0A%0A        if not line:%0A            continue%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-06_01-58-43",
+            "content": "@@ -987,933 +987,4 @@\n ue%0A%0A\n-        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A%0A        elif args%5B0%5D == %22init%22:%0A            if len(args) %3C 2: continue%0A            batteryMax_int = int (args%5B1%5D)%0A            calculadora = Calculator(batteryMax_int)%0A            continue%0A%0A        if calculadora is None:%0A            continue%0A%0A        elif args%5B0%5D == %22show%22:%0A            print(calculadora)%0A%0A        elif args%5B0%5D == %22charge%22:%0A            if len(args) %3C 2: continue%0A            charge_value_ = int(args%5B1%5D)%0A            calculadora.charge(charge_value)%0A%0A        elif args%5B0%5D == %22sum%22:%0A            if len(args) %3C 3: continue%0A            a = int(args%5B1%5D)%0A            b = int(args%5B2%5D)%0A            calculadora.sum(a, b)%0A%0A        elif args%5B0%5D == %22div%22:%0A            if len(args) %3C 3: continue%0A            num = int(args%5B1%5D)%0A            den = int(args%5B2%5D)%0A            calculadora.division(num, den)%0A%0Amain()\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-10-06_02-11-47",
+            "content": "@@ -86,26 +86,17 @@\n ryMax = \n-batteryMax\n+0\n %0A       \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-10-06_02-16-00",
+            "content": "@@ -1,9 +1,8 @@\n-t\n class Ca\n@@ -145,16 +145,17 @@\n splay = \n+0\n 0.0%0A%0A   \n@@ -222,17 +222,17 @@\n display:\n-.\n+ \n 2f%7D, bat\n@@ -440,17 +440,21 @@\n lf, \n-a\n+num\n : int, \n-b\n+den\n : in\n@@ -634,60 +634,31 @@\n     \n-%0A\n     \n-def division(self, num: int, den: int) -%3E None:\n+    return%0A        \n %0A   \n@@ -654,35 +654,32 @@\n        %0A        \n-if \n self.battery %3E 0\n@@ -671,33 +671,30 @@\n elf.battery \n-%3E 0:%0A    \n+-= 1%0A%0A\n         if d\n@@ -706,36 +706,32 @@\n  0:%0A            \n-    \n print(%22fail: div\n@@ -750,36 +750,32 @@\n o%22)%0A            \n-    \n return%0A         \n@@ -777,129 +777,32 @@\n     \n-    self.battery -= 1%0A            self.display = num / den%0A        else:%0A            print(%22fail: bateria insuficiente%22)%0A\n+self.display = num / den\n %0A%0Ade\n@@ -923,16 +923,17 @@\n ept EOFE\n+e\n rror:%0A  \n@@ -1208,24 +1208,25 @@\n ax_int = int\n+ \n (args%5B1%5D)%0A  \n@@ -1513,16 +1513,17 @@\n ge_value\n+_\n  = int(a\n@@ -1921,9 +1921,8 @@\n %0A%0Amain()\n-%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-10-06_02-16-55",
+            "content": "@@ -1,8 +1,9 @@\n+t\n class Ca\n@@ -146,17 +146,16 @@\n splay = \n-0\n 0.0%0A%0A   \n@@ -222,17 +222,17 @@\n display:\n- \n+.\n 2f%7D, bat\n@@ -440,21 +440,17 @@\n lf, \n-num\n+a\n : int, \n-den\n+b\n : in\n@@ -626,20 +626,68 @@\n e%22)%0A    \n+%0A\n     \n+def division(self, num: int, den: int) -%3E None:\n %0A       \n@@ -679,32 +679,35 @@\n %3E None:%0A        \n+if \n self.battery -= \n@@ -707,14 +707,17 @@\n ery \n--= 1%0A%0A\n+%3E 0:%0A    \n     \n@@ -737,32 +737,36 @@\n  0:%0A            \n+ \n+   \n print(%22fail: div\n@@ -789,24 +789,28 @@\n             \n+    \n return%0A     \n@@ -816,32 +816,129 @@\n     \n-self.display = num / den\n+    self.battery -= 1%0A            self.display = num / den%0A        else:%0A            print(%22fail: bateria insuficiente%22)%0A\n %0A%0Ade\n@@ -1059,17 +1059,16 @@\n ept EOFE\n-e\n rror:%0A  \n@@ -1347,17 +1347,16 @@\n nt = int\n- \n (args%5B1%5D\n@@ -1647,17 +1647,16 @@\n ge_value\n-_\n  = int(a\n@@ -2050,12 +2050,13 @@\n den)%0A%0Amain()\n+%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-17-17",
+            "content": "@@ -145,16 +145,17 @@\n splay = \n+0\n 0.0%0A%0A   \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-17-35",
+            "content": "@@ -145,16 +145,19 @@\n splay = \n+0.0\n %0A%0A    de\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-17-40",
+            "content": "@@ -145,17 +145,16 @@\n splay = \n-0\n %0A%0A    de\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-17-47",
+            "content": "@@ -150,11 +150,8 @@\n  = 0\n-.00\n %0A%0A  \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-17-57",
+            "content": "@@ -223,17 +223,16 @@\n isplay: \n-.\n 2f%7D, bat\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-21-52",
+            "content": "@@ -222,16 +222,17 @@\n display:\n+ \n .2f%7D, ba\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-22-11",
+            "content": "@@ -222,17 +222,16 @@\n display:\n- \n .2f%7D, ba\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-22-19",
+            "content": "@@ -144,16 +144,17 @@\n isplay =\n+ \n 0.00%0A%0A  \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-23-05",
+            "content": "@@ -144,17 +144,16 @@\n isplay =\n- \n 0.00%0A%0A  \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-23-12",
+            "content": "@@ -228,16 +228,17 @@\n y: .2f%7D,\n+ \n battery \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-23-36",
+            "content": "@@ -228,17 +228,16 @@\n y: .2f%7D,\n- \n battery \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-23-48",
+            "content": "@@ -207,16 +207,17 @@\n isplay =\n+ \n %7Bself.di\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-23-58",
+            "content": "@@ -207,17 +207,16 @@\n isplay =\n- \n %7Bself.di\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-24-06",
+            "content": "@@ -207,16 +207,17 @@\n isplay =\n+ \n %7Bself.di\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-24-43",
+            "content": "@@ -207,17 +207,16 @@\n isplay =\n- \n %7Bself.di\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-24-50",
+            "content": "@@ -223,16 +223,17 @@\n isplay: \n+.\n 2f%7D, bat\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-25-35",
+            "content": "@@ -223,17 +223,16 @@\n isplay: \n-.\n 2f%7D, bat\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-25-40",
+            "content": "@@ -223,17 +223,16 @@\n isplay: \n-.\n .2f%7D, ba\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-25-51",
+            "content": "@@ -222,16 +222,18 @@\n display:\n+ .\n .2f%7D, ba\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-25-56",
+            "content": "@@ -222,17 +222,16 @@\n display:\n- \n .2f%7D, ba\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-26-02",
+            "content": "@@ -207,16 +207,17 @@\n isplay =\n+ \n %7Bself.di\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-26-31",
+            "content": "@@ -205,16 +205,17 @@\n %22display\n+ \n =%7Bself.d\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-26-38",
+            "content": "@@ -205,17 +205,16 @@\n %22display\n- \n =%7Bself.d\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-26-46",
+            "content": "@@ -1554,17 +1554,16 @@\n ge_value\n-_\n )%0A%0A     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-27-53",
+            "content": "@@ -1,228 +1,4 @@\n-%E2%9C%85 Corre%C3%A7%C3%A3o:%0ARemova a linha duplicada self.battery -= 1 fora do if:%0A%0Aif self.battery %3E 0:%0A    self.battery -= 1%0A    self.display = float(num + den)%0Aelse:%0A    print(%22fail: bateria insuficiente%22)%0A%0A%E2%9C%85 VERS%C3%83O CORRIGIDA DO C%C3%93DIGO:%0A\n clas\n@@ -207,17 +207,16 @@\n isplay =\n- \n %7Bself.di\n@@ -221,16 +221,17 @@\n display:\n+ \n .2f%7D, ba\n@@ -440,17 +440,21 @@\n lf, \n-a\n+num\n : int, \n-b\n+den\n : in\n@@ -630,60 +630,16 @@\n e%22)%0A\n-%0A\n     \n-def division(self, num: int, den: int) -%3E None:\n+    \n %0A   \n@@ -635,35 +635,32 @@\n        %0A        \n-if \n self.battery %3E 0\n@@ -652,33 +652,30 @@\n elf.battery \n-%3E 0:%0A    \n+-= 1%0A%0A\n         if d\n@@ -679,28 +679,24 @@\n f den == 0:%0A\n-    \n             \n@@ -735,28 +735,24 @@\n             \n-    \n return%0A     \n@@ -758,129 +758,32 @@\n     \n-    self.battery -= 1%0A            self.display = num / den%0A        else:%0A            print(%22fail: bateria insuficiente%22)%0A\n+self.display = num / den\n %0A%0Ade\n@@ -904,16 +904,17 @@\n ept EOFE\n+e\n rror:%0A  \n@@ -1189,24 +1189,25 @@\n ax_int = int\n+ \n (args%5B1%5D)%0A  \n@@ -1494,16 +1494,17 @@\n ge_value\n+_\n  = int(a\n@@ -1554,16 +1554,17 @@\n ge_value\n+_\n )%0A%0A     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-06_02-29-41",
+            "content": "@@ -1,8 +1,232 @@\n+%E2%9C%85 Corre%C3%A7%C3%A3o:%0ARemova a linha duplicada self.battery -= 1 fora do if:%0A%0Aif self.battery %3E 0:%0A    self.battery -= 1%0A    self.display = float(num + den)%0Aelse:%0A    print(%22fail: bateria insuficiente%22)%0A%0A%E2%9C%85 VERS%C3%83O CORRIGIDA DO C%C3%93DIGO:%0A\n class Ca\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-10-06_02-30-26",
+            "content": "@@ -1299,17 +1299,17 @@\n args) %3C \n-1\n+2\n : contin\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-32-08",
+            "content": "@@ -1291,33 +1291,33 @@\n  if len(args) %3C \n-2\n+1\n : continue%0A     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-32-16",
+            "content": "@@ -1299,17 +1299,17 @@\n args) %3C \n-1\n+2\n : contin\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-33-01",
+            "content": "@@ -1291,33 +1291,33 @@\n  if len(args) %3C \n-2\n+1\n : continue%0A     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-33-08",
+            "content": "@@ -1607,17 +1607,17 @@\n args) %3C \n-1\n+2\n : contin\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-06_02-33-21",
+            "content": "class Calculator:\n    def __init__(self, batteryMax: int) -> None:\n        self.batteryMax = batteryMax\n        self.battery = 0\n        self.display = 0.00\n\n    def __str__(self) -> str:\n        return f\"display = {self.display:.2f}, battery = {self.battery}\"\n    \n    def charge(self, value: int) -> None:\n        self.battery += value\n        if self.battery > self.batteryMax:\n            self.battery = self.batteryMax\n\n    def sum(self, a: int, b: int) -> None:\n        if self.battery > 0:\n            self.battery -= 1\n            self.display = float(a + b)\n        else:\n            print(\"fail: bateria insuficiente\")\n\n    def division(self, num: int, den: int) -> None:\n        if self.battery > 0:\n            if den == 0:\n                print(\"fail: divisao por zero\")\n                return\n            self.battery -= 1\n            self.display = num / den\n        else:\n            print(\"fail: bateria insuficiente\")\n\n\ndef main():\n    calculadora = None\n\n    while True:\n        try:\n            line: str = input().strip()\n        except EOFError:\n            break\n\n        if not line:\n            continue\n\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n\n        elif args[0] == \"init\":\n            if len(args) < 2: continue\n            batteryMax_int = int(args[1])\n            calculadora = Calculator(batteryMax_int)\n            continue\n\n        if calculadora is None:\n            continue\n\n        elif args[0] == \"show\":\n            print(calculadora)\n\n        elif args[0] == \"charge\":\n            if len(args) < 1: continue\n            charge_value = int(args[1])\n            calculadora.charge(charge_value)\n\n        elif args[0] == \"sum\":\n            if len(args) < 3: continue\n            a = int(args[1])\n            b = int(args[2])\n            calculadora.sum(a, b)\n\n        elif args[0] == \"div\":\n            if len(args) < 3: continue\n            num = int(args[1])\n            den = int(args[2])\n            calculadora.division(num, den)\n\nmain()",
+            "lines": "80"
+        }
+    ]
+}
